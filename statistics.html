@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Dashboard - GlowUp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="progress.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="dashboard.html" class="logo">GlowUp</a>
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">Habits</a>
+          <a href="progress.html" class="nav-link active">Progress</a>
+          <a href="profile.html" class="nav-link">Profile</a>
+          <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="dashboard-container">
+      <div class="stats-overview">
+        <div class="stat-card">
+          <h3>Current Streak</h3>
+          <div class="stat-value" id="currentStreak">0 days</div>
+          <div class="stat-subtitle">Keep it up!</div>
+        </div>
+        <div class="stat-card">
+          <h3>Completion Rate</h3>
+          <div class="stat-value" id="completionRate">0%</div>
+          <div class="stat-subtitle">This week</div>
+        </div>
+        <div class="stat-card">
+          <h3>Total Habits</h3>
+          <div class="stat-value" id="totalHabits">0</div>
+          <div class="stat-subtitle">Active habits</div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Weekly Progress</h3>
+          <canvas id="weeklyProgress"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Category Distribution</h3>
+          <canvas id="categoryDistribution"></canvas>
+        </div>
+      </div>
+
+      <div class="achievements-section">
+        <h2>Achievements</h2>
+        <div class="achievements-grid" id="achievementsGrid">
+          <!-- Achievements will be added here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="progress.js"></script>
+  </body>
+</html>

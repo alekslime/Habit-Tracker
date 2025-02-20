@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker - GlowUp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">GlowUp</a>
+        <div class="nav-links">
+          <span class="user-name">Welcome, User!</span>
+          <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="dashboard-container">
+      <!-- Habit Management Section -->
+      <div class="habit-management">
+        <h2>My Habits</h2>
+        <button id="addHabitBtn" class="primary-btn">Add New Habit</button>
+      </div>
+
+      <!-- Categories Section -->
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>Activity</h3>
+          <div class="habit-list" id="activityList">
+            <!-- Habits will be added here -->
+          </div>
+          <button class="add-to-category-btn" data-category="activity">
+            + Add to Activity
+          </button>
+        </div>
+
+        <div class="category-card">
+          <h3>Decline</h3>
+          <div class="habit-list" id="declineList">
+            <!-- Habits will be added here -->
+          </div>
+          <button class="add-to-category-btn" data-category="decline">
+            + Add to Decline
+          </button>
+        </div>
+
+        <div class="category-card">
+          <h3>To-Dos</h3>
+          <div class="habit-list" id="todosList">
+            <!-- Habits will be added here -->
+          </div>
+          <button class="add-to-category-btn" data-category="todos">
+            + Add to To-Dos
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Habit Modal -->
+    <div id="habitModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Add New Habit</h2>
+        <form id="habitForm">
+          <div class="form-group">
+            <label for="habitName">Habit Name</label>
+            <input
+              type="text"
+              id="habitName"
+              required
+              placeholder="e.g., 30 Min Cardio"
+            />
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" required>
+              <option value="activity">Activity</option>
+              <option value="decline">Decline</option>
+              <option value="todos">To-Dos</option>
+            </select>
+          </div>
+          <button type="submit" class="primary-btn">Add Habit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
