@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - GlowUp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-container">
+      <div class="auth-card">
+        <h1>Welcome Back!</h1>
+        <p class="auth-subtitle">Sign in to your account</p>
+
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email Address"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Your Password"
+              required
+            />
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" id="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="auth-button">Sign In</button>
+        </form>
+
+        <div class="auth-divider">
+          <span>Or continue with</span>
+        </div>
+
+        <div class="social-login">
+          <button class="social-button">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="Google"
+            />
+            Google
+          </button>
+          <button class="social-button">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+              alt="Facebook"
+            />
+            Facebook
+          </button>
+          <button class="social-button">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+              alt="Apple"
+            />
+            Apple
+          </button>
+        </div>
+
+        <p class="auth-link">
+          Don't have an account? <a href="signup.html">Sign up here</a>
+        </p>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
