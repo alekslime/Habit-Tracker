@@ -71,17 +71,17 @@ function renderHabits() {
         habit.completed ? "completed" : ""
       }`;
       habitElement.innerHTML = `
-                <input type="checkbox" 
-                       class="habit-checkbox" 
-                       ${habit.completed ? "checked" : ""}
-                       onchange="toggleHabit('${category}', ${habit.id})">
-                <span class="habit-name">${habit.name}</span>
-                <button class="delete-habit" onclick="deleteHabit('${category}', ${
+              <input type="checkbox" 
+                     class="habit-checkbox" 
+                     ${habit.completed ? "checked" : ""}
+                     onchange="toggleHabit('${category}', ${habit.id})">
+              <span class="habit-name">${habit.name}</span>
+              <button class="delete-habit" onclick="deleteHabit('${category}', ${
         habit.id
       })">
-                    ×
-                </button>
-            `;
+                  ×
+              </button>
+          `;
       listElement.appendChild(habitElement);
     });
   });
