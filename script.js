@@ -11,7 +11,7 @@ const createMobileMenu = () => {
       navLinks.style.display === "flex" ? "none" : "flex";
   });
 
-  nav.querySelector(".nav-container").appendChild(mobileMenuBtn);
+  nav.querySelector(".nav-links").appendChild(mobileMenuBtn);
 };
 
 // Initialize mobile menu on load
